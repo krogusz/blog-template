@@ -1,1 +1,1 @@
-Simple blog template
+Simple blog template :)
