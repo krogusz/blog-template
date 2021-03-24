@@ -1,0 +1,26 @@
+{
+  "name": "blog-template",
+  "version": "1.0.0",
+  "description": "simple blog templates",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run browser-sync & npm run scss",
+    "browser-sync": "browser-sync start --server \"./\" --files \"./\"",
+    "scss": "sass --watch index.scss index.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krogusz/blog-template.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krogusz/blog-template/issues"
+  },
+  "homepage": "https://github.com/krogusz/blog-template#readme",
+  "dependencies": {
+    "browser-sync": "^2.26.14",
+    "sass": "^1.32.8"
+  }
+}
