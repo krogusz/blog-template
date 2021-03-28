@@ -21,21 +21,12 @@ const Utils = {
     if (options.id) {
       element.id = options.id;
     }
-
-    if (options.attributes) {
-      options.attributes.forEach(attr => {
-        let att = attr['att'];
-        let val = attr['val'];
-        element.setAttribute(att, val);
-      });
-    }
-
     return element;
   }
 };
 
 class ContentContainer{
-  constructor(container){
+    constructor(container){
     this.container = container
     this.render()
   }
@@ -45,7 +36,6 @@ class ContentContainer{
       className: "content-container"
     }
     const contentContainer = Utils.dom("div", contentContainerOptions);
-
     //create header area
     const headerContainer = new HeaderContainer(contentContainer);
   }
@@ -62,7 +52,6 @@ class HeaderContainer{
       className: "header-container"
     }
     const headerContainer = Utils.dom("header", headerContainerOptions)
-
     //create header
     const headerOptions = {
       parent: headerContainer,
@@ -74,7 +63,7 @@ class HeaderContainer{
   }
 }
 
-//create class for all navigation
+//create class for all navigations
 class Navigation{
   constructor(container, elements = [], navType = "header"){
     Object.assign(this, { container, elements, navType });
@@ -86,14 +75,12 @@ class Navigation{
       className: `${this.navType}-navigation`,
     }
     const element = Utils.dom("nav", elementOptions)
-
     //create list (<ul>)
     const listOptions = {
       parent: element,
       className: `${this.navType}-list`,
     }
     const list = Utils.dom("ul", listOptions)
-
     //create list's elements (<li>)
     this.elements.map(listElement => {
       let listElementOptions = {

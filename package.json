@@ -7,7 +7,7 @@
     "start": "npm run browser-sync & npm run scss",
     "browser-sync": "browser-sync start --server \"./\" --files \"./\"",
     "scss": "sass --watch index.scss index.css",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx eslint --ext js,jsx "
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,8 @@
   "dependencies": {
     "browser-sync": "^2.26.14",
     "sass": "^1.32.8"
+  },
+  "devDependencies": {
+    "eslint": "^7.23.0"
   }
 }
